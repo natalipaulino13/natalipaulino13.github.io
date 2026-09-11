@@ -1,6 +1,5 @@
 /* ========================================
    PORTFOLIO - NATALY PAULINO
-  
    ======================================== */
 
 
@@ -274,12 +273,130 @@ section {
     font-size: 0.9rem;
     font-weight: bold;
 
-    transition: 0.3s;
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s,
+        background 0.3s,
+        color 0.3s;
 }
 
 .skill:hover {
     transform: translateY(-3px);
     box-shadow: var(--sombra);
+}
+
+
+/* ---------- BOTÓN JAVA ---------- */
+
+.skill-link {
+    cursor: pointer;
+    color: var(--texto);
+}
+
+.skill-link:hover {
+    background: var(--rosa-claro);
+    color: var(--rosa-oscuro);
+    transform: translateY(-4px);
+    box-shadow: var(--sombra);
+}
+
+
+/* ---------- FORMACIÓN ---------- */
+
+.formacion {
+    background: var(--fondo);
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.education-card {
+    background: var(--blanco);
+
+    border: 1px solid #f0e4e8;
+
+    border-radius: var(--radio);
+
+    padding: 30px;
+
+    display: flex;
+    gap: 25px;
+
+    box-shadow: var(--sombra);
+
+    transition:
+        transform 0.35s,
+        box-shadow 0.35s,
+        border-color 0.35s;
+}
+
+.education-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: var(--sombra-hover);
+
+    border-color: #e4b8c7;
+}
+
+.education-icon {
+    min-width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--rosa-claro);
+
+    border-radius: 18px;
+
+    font-size: 1.8rem;
+}
+
+.education-content {
+    flex: 1;
+}
+
+.education-type {
+    color: var(--rosa-oscuro);
+
+    font-size: 0.75rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+.education-content h3 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.education-content h4 {
+    color: var(--texto);
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.education-date {
+    color: var(--rosa);
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.education-content p:not(.education-type):not(.education-date) {
+    color: var(--texto-suave);
+    font-size: 0.92rem;
+    margin-bottom: 12px;
 }
 
 
@@ -483,6 +600,15 @@ footer a {
 
 /* ---------- RESPONSIVE ---------- */
 
+@media (max-width: 900px) {
+
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
 @media (max-width: 800px) {
 
     .nav-links {
@@ -542,6 +668,10 @@ footer a {
     }
 
     .project-card {
+        flex-direction: column;
+    }
+
+    .education-card {
         flex-direction: column;
     }
 
