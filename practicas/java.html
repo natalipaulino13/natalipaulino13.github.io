@@ -1,590 +1,750 @@
-
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Prácticas de Java | Nataly Paulino</title>
 
-    <!-- Como java.html está dentro de la carpeta practicas -->
-    <link rel="stylesheet" href="../css/style.css">
+<title>Java | Nataly Paulino</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+    /* =========================
+       CABECERA
+    ========================= */
+
+    .java-header {
+        padding: 20px 0;
+    }
+
+    .java-header .navbar {
+        max-width: 1100px;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+
+    /* =========================
+       TARJETAS DE JAVA
+    ========================= */
+
+    .java-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        margin-top: 50px;
+    }
+
+    .java-card {
+        background: white;
+        border: 2px solid var(--rosa-claro);
+        border-radius: 20px;
+        padding: 30px;
+        min-height: 330px;
+
+        display: flex;
+        flex-direction: column;
+
+        box-shadow: 0 8px 25px rgba(168, 95, 121, 0.10);
+
+        transition: transform 0.3s ease,
+                    box-shadow 0.3s ease,
+                    border-color 0.3s ease;
+    }
+
+    .java-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--rosa);
+        box-shadow: 0 15px 35px rgba(168, 95, 121, 0.18);
+    }
+
+
+    /* =========================
+       ICONO
+    ========================= */
+
+    .java-icon {
+        width: 65px;
+        height: 65px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: var(--rosa-claro);
+        border-radius: 18px;
+
+        font-size: 32px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+       TEXTO
+    ========================= */
+
+    .java-type {
+        color: var(--rosa-oscuro);
+        font-size: 13px;
+        font-weight: 600;
+
+        margin-bottom: 8px;
+    }
+
+    .java-card h3 {
+        margin: 0 0 12px 0;
+
+        color: var(--texto);
+
+        font-size: 21px;
+    }
+
+    .java-card p {
+        color: var(--texto-suave);
+
+        font-size: 14px;
+        line-height: 1.6;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+       ETIQUETAS
+    ========================= */
+
+    .java-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+
+        margin-top: auto;
+        margin-bottom: 20px;
+    }
+
+    .java-tags span {
+        background: var(--rosa-claro);
+        color: var(--rosa-oscuro);
+
+        padding: 6px 10px;
+
+        border-radius: 20px;
+
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+
+    /* =========================
+       BOTÓN
+    ========================= */
+
+    .java-link {
+        display: inline-block;
+
+        color: var(--rosa-oscuro);
+
+        font-size: 14px;
+        font-weight: 700;
+
+        text-decoration: none;
+
+        transition: color 0.2s ease,
+                    transform 0.2s ease;
+    }
+
+    .java-link:hover {
+        color: var(--rosa);
+        transform: translateX(4px);
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+        .java-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
+    @media (max-width: 600px) {
+
+        .java-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .java-card {
+            padding: 25px;
+        }
+
+    }
+
+</style>
+
+
 </head>
 
 <body>
 
-    <!-- ==================== CABECERA ==================== -->
 
-    <header class="java-header">
+<!-- =========================
+     CABECERA
+========================= -->
 
-        <nav class="navbar">
+<header class="java-header">
 
-            <a href="../index.html" class="logo">
-                Nataly<span>.</span>
-            </a>
+    <nav class="navbar">
 
-            <a href="../index.html" class="btn secundario">
-                ← Volver al portfolio
-            </a>
-
-        </nav>
-
-    </header>
-
-
-    <!-- ==================== PRÁCTICAS JAVA ==================== -->
-
-    <main>
-
-        <section class="section practicas-java">
-
-            <div class="section-title">
-
-                <p>☕ Programación</p>
-
-                <h1>Prácticas de Java</h1>
-
-                <span>
-                    Una selección de proyectos realizados durante mi formación,
-                    aplicando programación orientada a objetos, colecciones,
-                    ficheros, interfaces, bases de datos y Java Swing.
-                </span>
-
-            </div>
-
-
-            <div class="projects-grid">
-
-
-                <!-- GESTOR MULTIMEDIA -->
-
-                <article class="project-card">
-
-                    <div class="project-icon">🎬</div>
-
-                    <div class="project-content">
-
-                        <p class="project-type">Java · POO</p>
-
-                        <h3>Gestor Multimedia</h3>
-
-                        <p>
-                            Aplicación para gestionar diferentes contenidos multimedia,
-                            como películas, podcasts y cursos online, utilizando
-                            herencia, interfaces y polimorfismo.
-                        </p>
-
-                        <div class="tags">
-                            <span>Java</span>
-                            <span>Herencia</span>
-                            <span>Interfaces</span>
-                            <span>Polimorfismo</span>
-                        </div>
-
-                        <a href="gestor-multimedia.html" class="project-link">
-                            Ver práctica →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- SUPERMERCADO -->
-
-                <article class="project-card">
-
-                    <div class="project-icon">🛒</div>
-
-                    <div class="project-content">
-
-                        <p class="project-type">Java · Swing</p>
-
-                        <h3>Supermercado</h3>
-
-                        <p>
-                            Aplicación gráfica para gestionar productos, compras
-                            y devoluciones, permitiendo calcular el precio total
-                            de los pedidos.
-                        </p>
-
-                        <div class="tags">
-                            <span>Java</span>
-                            <span>Swing</span>
-                            <span>Eventos</span>
-                        </div>
-
-                        <a href="supermercado.html" class="project-link">
-                            Ver práctica →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- REFUGIO DE ANIMALES -->
-
-                <article class="project-card">
-
-                    <div class="project-icon">🐾</div>
-
-                    <div class="project-content">
-
-                        <p class="project-type">Java · POO</p>
-
-                        <h3>Refugio de Animales</h3>
-
-                        <p>
-                            Programa para gestionar diferentes tipos de animales
-                            de un refugio aplicando conceptos de herencia
-                            y polimorfismo.
-                        </p>
-
-                        <div class="tags">
-                            <span>Java</span>
-                            <span>Herencia</span>
-                            <span>Polimorfismo</span>
-                        </div>
-
-                        <a href="refugio-animales.html" class="project-link">
-                            Ver práctica →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- JUEGO DEL BOMBO -->
-
-                <article class="project-card">
-
-                    <div class="project-icon">🎲</div>
-
-                    <div class="project-content">
-
-                        <p class="project-type">Java · POO</p>
-
-                        <h3>Juego del Bombo</h3>
-
-                        <p>
-                            Juego basado en la generación de números aleatorios
-                            en el que participan varios jugadores hasta
-                            encontrar un ganador.
-                        </p>
-
-                        <div class="tags">
-                            <span>Java</span>
-                            <span>Random</span>
-                            <span>POO</span>
-                        </div>
-
-                        <a href="juego-bombo.html" class="project-link">
-                            Ver práctica →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- VIDEOCLUB -->
-
-                <article class="project-card">
-
-                    <div class="project-icon">🎥</div>
-
-                    <div class="project-content">
-
-                        <p class="project-type">Java · Colecciones</p>
-
-                        <h3>Videoclub</h3>
-
-                        <p>
-                            Aplicación para gestionar películas y CDs,
-                            incluyendo operaciones de alquiler, venta
-                            y control de ganancias.
-                        </p>
-
-                        <div class="tags">
-                            <span>Java</span>
-                            <span>ArrayList</span>
-                            <span>Enum</span>
-                            <span>POO</span>
-                        </div>
-
-                        <a href="videoclub.html" class="project-link">
-                            Ver práctica →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- FIGURAS GEOMÉTRICAS -->
-
-                <article class="project-card">
-
-                    <div class="project-icon">📐</div>
-
-                    <div class="project-content">
-
-                        <p class="project-type">Java · POO</p>
-
-                        <h3>Figuras Geométricas</h3>
-
-                        <p>
-                            Programa para calcular superficies, volúmenes,
-                            densidades, pesos y costes de diferentes
-                            figuras geométricas.
-                        </p>
-
-                        <div class="tags">
-                            <span>Java</span>
-                            <span>POO</span>
-                            <span>Clases</span>
-                        </div>
-
-                        <a href="figuras-geometricas.html" class="project-link">
-                            Ver práctica →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- GESTIÓN DE PERSONAL -->
-
-                <article class="project-card">
-
-                    <div class="project-icon">👩‍💼</div>
-
-                    <div class="project-content">
-
-                        <p class="project-type">Java · Swing</p>
-
-                        <h3>Gestión de Personal</h3>
-
-                        <p>
-                            Aplicación para gestionar profesores y personal
-                            administrativo utilizando programación orientada
-                            a objetos y una interfaz gráfica.
-                        </p>
-
-                        <div class="tags">
-                            <span>Java</span>
-                            <span>Herencia</span>
-                            <span>Polimorfismo</span>
-                            <span>Swing</span>
-                        </div>
-
-                        <a href="academia.html" class="project-link">
-                            Ver práctica →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- GESTIÓN DE PACIENTES -->
-
-                <article class="project-card">
-
-                    <div class="project-icon">🏥</div>
-
-                    <div class="project-content">
-
-                        <p class="project-type">Java · Base de datos</p>
-
-                        <h3>Gestión de Pacientes</h3>
-
-                        <p>
-                            Aplicación para gestionar pacientes de una clínica
-                            mediante operaciones CRUD, búsquedas y filtros,
-                            conectando Java con una base de datos SQLite.
-                        </p>
-
-                        <div class="tags">
-                            <span>Java</span>
-                            <span>JDBC</span>
-                            <span>SQLite</span>
-                            <span>SQL</span>
-                        </div>
-
-                        <a href="clinica.html" class="project-link">
-                            Ver práctica →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ALQUILER DE COCHES -->
-
-                <article class="project-card">
-
-                    <div class="project-icon">🚗</div>
-
-                    <div class="project-content">
-
-                        <p class="project-type">Java · Colecciones</p>
-
-                        <h3>Alquiler de Coches</h3>
-
-                        <p>
-                            Sistema para gestionar el alquiler de vehículos,
-                            utilizando programación orientada a objetos,
-                            ArrayList y comparadores.
-                        </p>
-
-                        <div class="tags">
-                            <span>Java</span>
-                            <span>POO</span>
-                            <span>ArrayList</span>
-                            <span>Comparator</span>
-                        </div>
-
-                        <a href="alquiler-coches.html" class="project-link">
-                            Ver práctica →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- GRANJA DE ANIMALES -->
-
-                <article class="project-card">
-
-                    <div class="project-icon">🐄</div>
-
-                    <div class="project-content">
-
-                        <p class="project-type">Java · POO</p>
-
-                        <h3>Granja de Animales</h3>
-
-                        <p>
-                            Aplicación para representar y gestionar diferentes
-                            animales de una granja mediante clases, herencia,
-                            clases abstractas e interfaces.
-                        </p>
-
-                        <div class="tags">
-                            <span>Java</span>
-                            <span>Herencia</span>
-                            <span>Interfaces</span>
-                            <span>POO</span>
-                        </div>
-
-                        <a href="granja-animales.html" class="project-link">
-                            Ver práctica →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- AGENDA DE CONTACTOS -->
-
-                <article class="project-card">
-
-                    <div class="project-icon">📇</div>
-
-                    <div class="project-content">
-
-                        <p class="project-type">Java · Ficheros</p>
-
-                        <h3>Agenda de Contactos</h3>
-
-                        <p>
-                            Aplicación para gestionar contactos utilizando
-                            ArrayList y serialización de objetos para guardar
-                            y recuperar la información desde archivos.
-                        </p>
-
-                        <div class="tags">
-                            <span>Java</span>
-                            <span>ArrayList</span>
-                            <span>Serialización</span>
-                            <span>Ficheros</span>
-                        </div>
-
-                        <a href="agenda-contactos.html" class="project-link">
-                            Ver práctica →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- AGENDA CSV -->
-
-                <article class="project-card">
-
-                    <div class="project-icon">📄</div>
-
-                    <div class="project-content">
-
-                        <p class="project-type">Java · CSV</p>
-
-                        <h3>Agenda de Contactos CSV</h3>
-
-                        <p>
-                            Aplicación para añadir, buscar, listar y eliminar
-                            contactos, utilizando colecciones y almacenamiento
-                            de datos mediante archivos CSV.
-                        </p>
-
-                        <div class="tags">
-                            <span>Java</span>
-                            <span>POO</span>
-                            <span>ArrayList</span>
-                            <span>CSV</span>
-                        </div>
-
-                        <a href="agenda-contactos-csv.html" class="project-link">
-                            Ver práctica →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- BIBLIOTECA -->
-
-                <article class="project-card">
-
-                    <div class="project-icon">📚</div>
-
-                    <div class="project-content">
-
-                        <p class="project-type">Java · SQL</p>
-
-                        <h3>Biblioteca</h3>
-
-                        <p>
-                            Aplicación para gestionar libros utilizando Java,
-                            JDBC y SQLite, con operaciones CRUD, búsquedas,
-                            filtros y ordenación.
-                        </p>
-
-                        <div class="tags">
-                            <span>Java</span>
-                            <span>JDBC</span>
-                            <span>SQLite</span>
-                            <span>SQL</span>
-                        </div>
-
-                        <a href="biblioteca.html" class="project-link">
-                            Ver práctica →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- GESTIÓN DE ALUMNOS -->
-
-                <article class="project-card">
-
-                    <div class="project-icon">🎓</div>
-
-                    <div class="project-content">
-
-                        <p class="project-type">Java · Colecciones</p>
-
-                        <h3>Gestión de Alumnos</h3>
-
-                        <p>
-                            Aplicación para gestionar un censo de alumnos
-                            y un registro de partes utilizando diferentes
-                            colecciones de Java.
-                        </p>
-
-                        <div class="tags">
-                            <span>Java</span>
-                            <span>ArrayList</span>
-                            <span>HashSet</span>
-                            <span>POO</span>
-                        </div>
-
-                        <a href="censo.html" class="project-link">
-                            Ver práctica →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- FERIA DE ATRACCIONES -->
-
-                <article class="project-card">
-
-                    <div class="project-icon">🎡</div>
-
-                    <div class="project-content">
-
-                        <p class="project-type">Java · POO</p>
-
-                        <h3>Feria de Atracciones</h3>
-
-                        <p>
-                            Aplicación para gestionar una feria, sus atracciones,
-                            los feriantes, los cuadrantes de trabajo y las
-                            ganancias generadas.
-                        </p>
-
-                        <div class="tags">
-                            <span>Java</span>
-                            <span>POO</span>
-                            <span>ArrayList</span>
-                            <span>Interfaces</span>
-                        </div>
-
-                        <a href="parque.html" class="project-link">
-                            Ver práctica →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- ==================== FOOTER ==================== -->
-
-    <footer>
-
-        <p>
-            © 2026 Nataly Paulino · Portfolio de Desarrollo Web
-        </p>
-
-        <a href="../index.html">
-            Volver al inicio ↑
+        <a href="../index.html" class="logo">
+            Nataly<span>.</span>
         </a>
 
-    </footer>
+        <a href="../index.html" class="btn secundario">
+            ← Volver al portfolio
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     CONTENIDO
+========================= -->
+
+<main>
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <p>☕ Mi trabajo con Java</p>
+
+            <h1>Prácticas de Java</h1>
+
+            <span>
+                Proyectos realizados durante mi formación,
+                aplicando programación orientada a objetos,
+                colecciones, ficheros y bases de datos.
+            </span>
+
+        </div>
+
+
+        <!-- =========================
+             TARJETAS
+        ========================= -->
+
+        <div class="java-grid">
+
+
+            <!-- 1. GESTOR MULTIMEDIA -->
+
+            <article class="java-card">
+
+                <div class="java-icon">🎬</div>
+
+                <div class="java-type">
+                    Java · POO
+                </div>
+
+                <h3>Gestor Multimedia</h3>
+
+                <p>
+                    Aplicación para gestionar películas, podcasts
+                    y cursos online mediante herencia, interfaces
+                    y polimorfismo.
+                </p>
+
+                <div class="java-tags">
+                    <span>Java</span>
+                    <span>Herencia</span>
+                    <span>Interfaces</span>
+                    <span>POO</span>
+                </div>
+
+                <a href="gestor-multimedia.html" class="java-link">
+                    Ver práctica →
+                </a>
+
+            </article>
+
+
+            <!-- 2. SUPERMERCADO -->
+
+            <article class="java-card">
+
+                <div class="java-icon">🛒</div>
+
+                <div class="java-type">
+                    Java · Swing
+                </div>
+
+                <h3>Supermercado</h3>
+
+                <p>
+                    Aplicación gráfica para gestionar productos,
+                    compras, devoluciones y calcular el precio
+                    total de un pedido.
+                </p>
+
+                <div class="java-tags">
+                    <span>Java</span>
+                    <span>Swing</span>
+                    <span>Eventos</span>
+                </div>
+
+                <a href="supermercado.html" class="java-link">
+                    Ver práctica →
+                </a>
+
+            </article>
+
+
+            <!-- 3. REFUGIO -->
+
+            <article class="java-card">
+
+                <div class="java-icon">🐶</div>
+
+                <div class="java-type">
+                    Java · POO
+                </div>
+
+                <h3>Refugio de Animales</h3>
+
+                <p>
+                    Programa basado en herencia y polimorfismo
+                    para gestionar diferentes tipos de animales
+                    de un refugio.
+                </p>
+
+                <div class="java-tags">
+                    <span>Java</span>
+                    <span>Herencia</span>
+                    <span>Polimorfismo</span>
+                </div>
+
+                <a href="refugio-animales.html" class="java-link">
+                    Ver práctica →
+                </a>
+
+            </article>
+
+
+            <!-- 4. BOMBO -->
+
+            <article class="java-card">
+
+                <div class="java-icon">🎲</div>
+
+                <div class="java-type">
+                    Java · Random
+                </div>
+
+                <h3>Juego del Bombo</h3>
+
+                <p>
+                    Juego basado en números aleatorios donde
+                    varios jugadores participan hasta encontrar
+                    un ganador.
+                </p>
+
+                <div class="java-tags">
+                    <span>Java</span>
+                    <span>Random</span>
+                    <span>POO</span>
+                </div>
+
+                <a href="juego-bombo.html" class="java-link">
+                    Ver práctica →
+                </a>
+
+            </article>
+
+
+            <!-- 5. VIDEOCLUB -->
+
+            <article class="java-card">
+
+                <div class="java-icon">🎥</div>
+
+                <div class="java-type">
+                    Java · Colecciones
+                </div>
+
+                <h3>Videoclub</h3>
+
+                <p>
+                    Aplicación para gestionar películas y CDs,
+                    controlar alquileres, ventas y ganancias
+                    del negocio.
+                </p>
+
+                <div class="java-tags">
+                    <span>Java</span>
+                    <span>ArrayList</span>
+                    <span>Enum</span>
+                </div>
+
+                <a href="videoclub.html" class="java-link">
+                    Ver práctica →
+                </a>
+
+            </article>
+
+
+            <!-- 6. FIGURAS -->
+
+            <article class="java-card">
+
+                <div class="java-icon">📐</div>
+
+                <div class="java-type">
+                    Java · POO
+                </div>
+
+                <h3>Figuras Geométricas</h3>
+
+                <p>
+                    Programa para calcular superficies,
+                    volúmenes, densidades, pesos y costes
+                    de diferentes figuras geométricas.
+                </p>
+
+                <div class="java-tags">
+                    <span>Java</span>
+                    <span>Random</span>
+                    <span>POO</span>
+                </div>
+
+                <a href="figuras-geometricas.html" class="java-link">
+                    Ver práctica →
+                </a>
+
+            </article>
+
+
+            <!-- 7. PERSONAL -->
+
+            <article class="java-card">
+
+                <div class="java-icon">👩‍💼</div>
+
+                <div class="java-type">
+                    Java · Gestión
+                </div>
+
+                <h3>Gestión de Personal</h3>
+
+                <p>
+                    Aplicación para gestionar profesores y
+                    administrativos mediante POO, herencia,
+                    polimorfismo, ficheros y Java Swing.
+                </p>
+
+                <div class="java-tags">
+                    <span>Java</span>
+                    <span>Herencia</span>
+                    <span>Swing</span>
+                </div>
+
+                <a href="academia.html" class="java-link">
+                    Ver práctica →
+                </a>
+
+            </article>
+
+
+            <!-- 8. PACIENTES -->
+
+            <article class="java-card">
+
+                <div class="java-icon">🏥</div>
+
+                <div class="java-type">
+                    Java · JDBC
+                </div>
+
+                <h3>Gestión de Pacientes</h3>
+
+                <p>
+                    Aplicación para gestionar pacientes de una
+                    clínica mediante Java, JDBC y SQLite,
+                    realizando operaciones CRUD.
+                </p>
+
+                <div class="java-tags">
+                    <span>Java</span>
+                    <span>JDBC</span>
+                    <span>SQLite</span>
+                    <span>SQL</span>
+                </div>
+
+                <a href="clinica.html" class="java-link">
+                    Ver práctica →
+                </a>
+
+            </article>
+
+
+            <!-- 9. COCHES -->
+
+            <article class="java-card">
+
+                <div class="java-icon">🚗</div>
+
+                <div class="java-type">
+                    Java · ArrayList
+                </div>
+
+                <h3>Alquiler de Coches</h3>
+
+                <p>
+                    Aplicación para gestionar un sistema de
+                    alquiler de coches utilizando POO,
+                    ArrayList y diferentes comparadores.
+                </p>
+
+                <div class="java-tags">
+                    <span>Java</span>
+                    <span>POO</span>
+                    <span>ArrayList</span>
+                    <span>Comparator</span>
+                </div>
+
+                <a href="alquiler-coches.html" class="java-link">
+                    Ver práctica →
+                </a>
+
+            </article>
+
+
+            <!-- 10. GRANJA -->
+
+            <article class="java-card">
+
+                <div class="java-icon">🐄</div>
+
+                <div class="java-type">
+                    Java · Herencia
+                </div>
+
+                <h3>Granja de Animales</h3>
+
+                <p>
+                    Aplicación para representar diferentes
+                    animales de una granja mediante herencia,
+                    clases abstractas e interfaces.
+                </p>
+
+                <div class="java-tags">
+                    <span>Java</span>
+                    <span>Herencia</span>
+                    <span>Interfaces</span>
+                    <span>POO</span>
+                </div>
+
+                <a href="granja-animales.html" class="java-link">
+                    Ver práctica →
+                </a>
+
+            </article>
+
+
+            <!-- 11. AGENDA -->
+
+            <article class="java-card">
+
+                <div class="java-icon">📇</div>
+
+                <div class="java-type">
+                    Java · Ficheros
+                </div>
+
+                <h3>Agenda de Contactos</h3>
+
+                <p>
+                    Aplicación para gestionar una agenda mediante
+                    ArrayList y serialización de objetos, guardando
+                    los datos en un fichero binario.
+                </p>
+
+                <div class="java-tags">
+                    <span>Java</span>
+                    <span>ArrayList</span>
+                    <span>Serialización</span>
+                    <span>Ficheros</span>
+                </div>
+
+                <a href="agenda-contactos.html" class="java-link">
+                    Ver práctica →
+                </a>
+
+            </article>
+
+
+            <!-- 12. AGENDA CSV -->
+
+            <article class="java-card">
+
+                <div class="java-icon">📄</div>
+
+                <div class="java-type">
+                    Java · CSV
+                </div>
+
+                <h3>Agenda de Contactos CSV</h3>
+
+                <p>
+                    Aplicación para gestionar contactos mediante
+                    ArrayList y ficheros CSV, permitiendo añadir,
+                    buscar, listar y eliminar contactos.
+                </p>
+
+                <div class="java-tags">
+                    <span>Java</span>
+                    <span>POO</span>
+                    <span>CSV</span>
+                    <span>Ficheros</span>
+                </div>
+
+                <a href="agenda-contactos-csv.html" class="java-link">
+                    Ver práctica →
+                </a>
+
+            </article>
+
+
+            <!-- 13. BIBLIOTECA -->
+
+            <article class="java-card">
+
+                <div class="java-icon">📚</div>
+
+                <div class="java-type">
+                    Java · Bases de datos
+                </div>
+
+                <h3>Biblioteca</h3>
+
+                <p>
+                    Aplicación para gestionar una biblioteca mediante
+                    Java, JDBC y SQLite, realizando operaciones CRUD,
+                    búsquedas, filtros y ordenación.
+                </p>
+
+                <div class="java-tags">
+                    <span>Java</span>
+                    <span>JDBC</span>
+                    <span>SQLite</span>
+                    <span>SQL</span>
+                </div>
+
+                <a href="biblioteca.html" class="java-link">
+                    Ver práctica →
+                </a>
+
+            </article>
+
+
+            <!-- 14. ALUMNOS -->
+
+            <article class="java-card">
+
+                <div class="java-icon">🎓</div>
+
+                <div class="java-type">
+                    Java · Colecciones
+                </div>
+
+                <h3>Gestión de Alumnos</h3>
+
+                <p>
+                    Aplicación para gestionar un censo de alumnos
+                    y un registro de partes utilizando colecciones
+                    como ArrayList y HashSet.
+                </p>
+
+                <div class="java-tags">
+                    <span>Java</span>
+                    <span>POO</span>
+                    <span>ArrayList</span>
+                    <span>HashSet</span>
+                </div>
+
+                <a href="censo.html" class="java-link">
+                    Ver práctica →
+                </a>
+
+            </article>
+
+
+            <!-- 15. FERIA -->
+
+            <article class="java-card">
+
+                <div class="java-icon">🎡</div>
+
+                <div class="java-type">
+                    Java · Gestión
+                </div>
+
+                <h3>Feria de Atracciones</h3>
+
+                <p>
+                    Aplicación para gestionar una feria de atracciones,
+                    sus feriantes, los cuadrantes de trabajo y las
+                    ganancias de la semana.
+                </p>
+
+                <div class="java-tags">
+                    <span>Java</span>
+                    <span>POO</span>
+                    <span>ArrayList</span>
+                    <span>Interfaces</span>
+                </div>
+
+                <a href="parque.html" class="java-link">
+                    Ver práctica →
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 Nataly Paulino · Portfolio
+    </p>
+
+    <a href="../index.html">
+        Volver al inicio
+    </a>
+
+</footer>
+
 
 </body>
 
 </html>
-
