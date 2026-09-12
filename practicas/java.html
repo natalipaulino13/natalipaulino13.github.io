@@ -8,19 +8,21 @@
 
     <title>Prácticas de Java | Nataly Paulino</title>
 
+    <!-- Como java.html está dentro de la carpeta practicas -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
 
-    <!-- CABECERA -->
-    <header>
+    <!-- ==================== CABECERA ==================== -->
+
+    <header class="java-header">
 
         <nav class="navbar">
 
-            <div class="logo">
-                Nataly Paulino
-            </div>
+            <a href="../index.html" class="logo">
+                Nataly<span>.</span>
+            </a>
 
             <a href="../index.html" class="btn secundario">
                 ← Volver al portfolio
@@ -31,19 +33,22 @@
     </header>
 
 
-    <!-- PRÁCTICAS DE JAVA -->
+    <!-- ==================== PRÁCTICAS JAVA ==================== -->
+
     <main>
 
-        <section class="section practicas">
+        <section class="section practicas-java">
 
             <div class="section-title">
 
-                <p>☕ Java</p>
+                <p>☕ Programación</p>
 
                 <h1>Prácticas de Java</h1>
 
                 <span>
-                    Proyectos realizados durante mi formación en programación.
+                    Una selección de proyectos realizados durante mi formación,
+                    aplicando programación orientada a objetos, colecciones,
+                    ficheros, interfaces, bases de datos y Java Swing.
                 </span>
 
             </div>
@@ -53,27 +58,32 @@
 
 
                 <!-- GESTOR MULTIMEDIA -->
+
                 <article class="project-card">
 
                     <div class="project-icon">🎬</div>
 
                     <div class="project-content">
 
+                        <p class="project-type">Java · POO</p>
+
                         <h3>Gestor Multimedia</h3>
 
                         <p>
-                            Aplicación para gestionar películas, podcasts y cursos online
-                            mediante herencia, interfaces y polimorfismo.
+                            Aplicación para gestionar diferentes contenidos multimedia,
+                            como películas, podcasts y cursos online, utilizando
+                            herencia, interfaces y polimorfismo.
                         </p>
 
                         <div class="tags">
                             <span>Java</span>
                             <span>Herencia</span>
                             <span>Interfaces</span>
+                            <span>Polimorfismo</span>
                         </div>
 
                         <a href="gestor-multimedia.html" class="project-link">
-                            Ver proyecto →
+                            Ver práctica →
                         </a>
 
                     </div>
@@ -82,17 +92,21 @@
 
 
                 <!-- SUPERMERCADO -->
+
                 <article class="project-card">
 
                     <div class="project-icon">🛒</div>
 
                     <div class="project-content">
 
+                        <p class="project-type">Java · Swing</p>
+
                         <h3>Supermercado</h3>
 
                         <p>
-                            Aplicación gráfica para gestionar productos, compras,
-                            devoluciones y calcular el precio total de un pedido.
+                            Aplicación gráfica para gestionar productos, compras
+                            y devoluciones, permitiendo calcular el precio total
+                            de los pedidos.
                         </p>
 
                         <div class="tags">
@@ -102,7 +116,7 @@
                         </div>
 
                         <a href="supermercado.html" class="project-link">
-                            Ver proyecto →
+                            Ver práctica →
                         </a>
 
                     </div>
@@ -110,18 +124,22 @@
                 </article>
 
 
-                <!-- REFUGIO -->
+                <!-- REFUGIO DE ANIMALES -->
+
                 <article class="project-card">
 
-                    <div class="project-icon">🐶</div>
+                    <div class="project-icon">🐾</div>
 
                     <div class="project-content">
+
+                        <p class="project-type">Java · POO</p>
 
                         <h3>Refugio de Animales</h3>
 
                         <p>
-                            Programa basado en herencia y polimorfismo para gestionar
-                            diferentes tipos de animales de un refugio.
+                            Programa para gestionar diferentes tipos de animales
+                            de un refugio aplicando conceptos de herencia
+                            y polimorfismo.
                         </p>
 
                         <div class="tags">
@@ -131,7 +149,7 @@
                         </div>
 
                         <a href="refugio-animales.html" class="project-link">
-                            Ver proyecto →
+                            Ver práctica →
                         </a>
 
                     </div>
@@ -139,18 +157,22 @@
                 </article>
 
 
-                <!-- BOMBO -->
+                <!-- JUEGO DEL BOMBO -->
+
                 <article class="project-card">
 
                     <div class="project-icon">🎲</div>
 
                     <div class="project-content">
 
+                        <p class="project-type">Java · POO</p>
+
                         <h3>Juego del Bombo</h3>
 
                         <p>
-                            Juego basado en números aleatorios donde varios jugadores
-                            participan hasta encontrar un ganador.
+                            Juego basado en la generación de números aleatorios
+                            en el que participan varios jugadores hasta
+                            encontrar un ganador.
                         </p>
 
                         <div class="tags">
@@ -160,7 +182,7 @@
                         </div>
 
                         <a href="juego-bombo.html" class="project-link">
-                            Ver proyecto →
+                            Ver práctica →
                         </a>
 
                     </div>
@@ -169,27 +191,32 @@
 
 
                 <!-- VIDEOCLUB -->
+
                 <article class="project-card">
 
                     <div class="project-icon">🎥</div>
 
                     <div class="project-content">
 
+                        <p class="project-type">Java · Colecciones</p>
+
                         <h3>Videoclub</h3>
 
                         <p>
-                            Aplicación para gestionar películas y CDs, controlar
-                            alquileres, ventas y ganancias del negocio.
+                            Aplicación para gestionar películas y CDs,
+                            incluyendo operaciones de alquiler, venta
+                            y control de ganancias.
                         </p>
 
                         <div class="tags">
                             <span>Java</span>
                             <span>ArrayList</span>
                             <span>Enum</span>
+                            <span>POO</span>
                         </div>
 
                         <a href="videoclub.html" class="project-link">
-                            Ver proyecto →
+                            Ver práctica →
                         </a>
 
                     </div>
@@ -197,28 +224,32 @@
                 </article>
 
 
-                <!-- FIGURAS -->
+                <!-- FIGURAS GEOMÉTRICAS -->
+
                 <article class="project-card">
 
                     <div class="project-icon">📐</div>
 
                     <div class="project-content">
 
+                        <p class="project-type">Java · POO</p>
+
                         <h3>Figuras Geométricas</h3>
 
                         <p>
-                            Programa para calcular superficies, volúmenes, densidades,
-                            pesos y costes de diferentes figuras geométricas.
+                            Programa para calcular superficies, volúmenes,
+                            densidades, pesos y costes de diferentes
+                            figuras geométricas.
                         </p>
 
                         <div class="tags">
                             <span>Java</span>
-                            <span>Random</span>
                             <span>POO</span>
+                            <span>Clases</span>
                         </div>
 
                         <a href="figuras-geometricas.html" class="project-link">
-                            Ver proyecto →
+                            Ver práctica →
                         </a>
 
                     </div>
@@ -226,29 +257,33 @@
                 </article>
 
 
-                <!-- PERSONAL -->
+                <!-- GESTIÓN DE PERSONAL -->
+
                 <article class="project-card">
 
                     <div class="project-icon">👩‍💼</div>
 
                     <div class="project-content">
 
+                        <p class="project-type">Java · Swing</p>
+
                         <h3>Gestión de Personal</h3>
 
                         <p>
-                            Aplicación para gestionar profesores y administrativos
-                            mediante programación orientada a objetos, herencia,
-                            polimorfismo, ficheros y Java Swing.
+                            Aplicación para gestionar profesores y personal
+                            administrativo utilizando programación orientada
+                            a objetos y una interfaz gráfica.
                         </p>
 
                         <div class="tags">
                             <span>Java</span>
                             <span>Herencia</span>
+                            <span>Polimorfismo</span>
                             <span>Swing</span>
                         </div>
 
                         <a href="academia.html" class="project-link">
-                            Ver proyecto →
+                            Ver práctica →
                         </a>
 
                     </div>
@@ -256,19 +291,22 @@
                 </article>
 
 
-                <!-- PACIENTES -->
+                <!-- GESTIÓN DE PACIENTES -->
+
                 <article class="project-card">
 
                     <div class="project-icon">🏥</div>
 
                     <div class="project-content">
 
+                        <p class="project-type">Java · Base de datos</p>
+
                         <h3>Gestión de Pacientes</h3>
 
                         <p>
-                            Aplicación para gestionar pacientes de una clínica mediante
-                            Java, JDBC y una base de datos SQLite, realizando operaciones
-                            CRUD, búsquedas y filtros.
+                            Aplicación para gestionar pacientes de una clínica
+                            mediante operaciones CRUD, búsquedas y filtros,
+                            conectando Java con una base de datos SQLite.
                         </p>
 
                         <div class="tags">
@@ -279,7 +317,7 @@
                         </div>
 
                         <a href="clinica.html" class="project-link">
-                            Ver proyecto →
+                            Ver práctica →
                         </a>
 
                     </div>
@@ -287,19 +325,22 @@
                 </article>
 
 
-                <!-- COCHES -->
+                <!-- ALQUILER DE COCHES -->
+
                 <article class="project-card">
 
                     <div class="project-icon">🚗</div>
 
                     <div class="project-content">
 
+                        <p class="project-type">Java · Colecciones</p>
+
                         <h3>Alquiler de Coches</h3>
 
                         <p>
-                            Aplicación para gestionar un sistema de alquiler de coches
-                            mediante programación orientada a objetos, colecciones
-                            ArrayList y diferentes comparadores.
+                            Sistema para gestionar el alquiler de vehículos,
+                            utilizando programación orientada a objetos,
+                            ArrayList y comparadores.
                         </p>
 
                         <div class="tags">
@@ -310,7 +351,7 @@
                         </div>
 
                         <a href="alquiler-coches.html" class="project-link">
-                            Ver proyecto →
+                            Ver práctica →
                         </a>
 
                     </div>
@@ -318,18 +359,21 @@
                 </article>
 
 
-                <!-- GRANJA -->
+                <!-- GRANJA DE ANIMALES -->
+
                 <article class="project-card">
 
                     <div class="project-icon">🐄</div>
 
                     <div class="project-content">
 
+                        <p class="project-type">Java · POO</p>
+
                         <h3>Granja de Animales</h3>
 
                         <p>
-                            Aplicación para representar diferentes animales de una
-                            granja mediante programación orientada a objetos, herencia,
+                            Aplicación para representar y gestionar diferentes
+                            animales de una granja mediante clases, herencia,
                             clases abstractas e interfaces.
                         </p>
 
@@ -341,7 +385,7 @@
                         </div>
 
                         <a href="granja-animales.html" class="project-link">
-                            Ver proyecto →
+                            Ver práctica →
                         </a>
 
                     </div>
@@ -349,19 +393,22 @@
                 </article>
 
 
-                <!-- AGENDA -->
+                <!-- AGENDA DE CONTACTOS -->
+
                 <article class="project-card">
 
                     <div class="project-icon">📇</div>
 
                     <div class="project-content">
 
+                        <p class="project-type">Java · Ficheros</p>
+
                         <h3>Agenda de Contactos</h3>
 
                         <p>
-                            Aplicación para gestionar una agenda de contactos mediante
-                            ArrayList y serialización de objetos, permitiendo guardar
-                            y recuperar los datos mediante un fichero binario.
+                            Aplicación para gestionar contactos utilizando
+                            ArrayList y serialización de objetos para guardar
+                            y recuperar la información desde archivos.
                         </p>
 
                         <div class="tags">
@@ -372,7 +419,7 @@
                         </div>
 
                         <a href="agenda-contactos.html" class="project-link">
-                            Ver proyecto →
+                            Ver práctica →
                         </a>
 
                     </div>
@@ -381,18 +428,21 @@
 
 
                 <!-- AGENDA CSV -->
+
                 <article class="project-card">
 
                     <div class="project-icon">📄</div>
 
                     <div class="project-content">
 
+                        <p class="project-type">Java · CSV</p>
+
                         <h3>Agenda de Contactos CSV</h3>
 
                         <p>
-                            Aplicación para gestionar una agenda de contactos mediante
-                            ArrayList y ficheros CSV, permitiendo añadir, buscar, listar
-                            y eliminar contactos, así como guardar y recuperar la información.
+                            Aplicación para añadir, buscar, listar y eliminar
+                            contactos, utilizando colecciones y almacenamiento
+                            de datos mediante archivos CSV.
                         </p>
 
                         <div class="tags">
@@ -400,11 +450,10 @@
                             <span>POO</span>
                             <span>ArrayList</span>
                             <span>CSV</span>
-                            <span>Ficheros</span>
                         </div>
 
                         <a href="agenda-contactos-csv.html" class="project-link">
-                            Ver proyecto →
+                            Ver práctica →
                         </a>
 
                     </div>
@@ -413,18 +462,21 @@
 
 
                 <!-- BIBLIOTECA -->
+
                 <article class="project-card">
 
                     <div class="project-icon">📚</div>
 
                     <div class="project-content">
 
+                        <p class="project-type">Java · SQL</p>
+
                         <h3>Biblioteca</h3>
 
                         <p>
-                            Aplicación para gestionar una biblioteca mediante Java,
-                            JDBC y SQLite, realizando operaciones CRUD, búsquedas,
-                            filtros y ordenación de libros.
+                            Aplicación para gestionar libros utilizando Java,
+                            JDBC y SQLite, con operaciones CRUD, búsquedas,
+                            filtros y ordenación.
                         </p>
 
                         <div class="tags">
@@ -435,7 +487,7 @@
                         </div>
 
                         <a href="biblioteca.html" class="project-link">
-                            Ver proyecto →
+                            Ver práctica →
                         </a>
 
                     </div>
@@ -443,29 +495,33 @@
                 </article>
 
 
-                <!-- CENSO -->
+                <!-- GESTIÓN DE ALUMNOS -->
+
                 <article class="project-card">
 
                     <div class="project-icon">🎓</div>
 
                     <div class="project-content">
 
+                        <p class="project-type">Java · Colecciones</p>
+
                         <h3>Gestión de Alumnos</h3>
 
                         <p>
-                            Aplicación para gestionar un censo de alumnos y un registro
-                            de partes utilizando colecciones de Java como ArrayList y HashSet.
+                            Aplicación para gestionar un censo de alumnos
+                            y un registro de partes utilizando diferentes
+                            colecciones de Java.
                         </p>
 
                         <div class="tags">
                             <span>Java</span>
-                            <span>POO</span>
                             <span>ArrayList</span>
                             <span>HashSet</span>
+                            <span>POO</span>
                         </div>
 
                         <a href="censo.html" class="project-link">
-                            Ver proyecto →
+                            Ver práctica →
                         </a>
 
                     </div>
@@ -473,19 +529,22 @@
                 </article>
 
 
-                <!-- FERIA -->
+                <!-- FERIA DE ATRACCIONES -->
+
                 <article class="project-card">
 
                     <div class="project-icon">🎡</div>
 
                     <div class="project-content">
 
+                        <p class="project-type">Java · POO</p>
+
                         <h3>Feria de Atracciones</h3>
 
                         <p>
-                            Aplicación para gestionar una feria de atracciones, sus
-                            feriantes, los cuadrantes de trabajo y las ganancias de
-                            la semana utilizando Java y ArrayList.
+                            Aplicación para gestionar una feria, sus atracciones,
+                            los feriantes, los cuadrantes de trabajo y las
+                            ganancias generadas.
                         </p>
 
                         <div class="tags">
@@ -496,7 +555,7 @@
                         </div>
 
                         <a href="parque.html" class="project-link">
-                            Ver proyecto →
+                            Ver práctica →
                         </a>
 
                     </div>
@@ -511,12 +570,17 @@
     </main>
 
 
-    <!-- PIE DE PÁGINA -->
+    <!-- ==================== FOOTER ==================== -->
+
     <footer>
 
         <p>
             © 2026 Nataly Paulino · Portfolio de Desarrollo Web
         </p>
+
+        <a href="../index.html">
+            Volver al inicio ↑
+        </a>
 
     </footer>
 
