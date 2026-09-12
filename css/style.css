@@ -256,6 +256,9 @@ section {
     color: var(--texto-suave);
 }
 
+
+/* ---------- TECNOLOGÍAS SOBRE MÍ ---------- */
+
 .skills {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -273,11 +276,7 @@ section {
     font-size: 0.9rem;
     font-weight: bold;
 
-    transition:
-        transform 0.3s,
-        box-shadow 0.3s,
-        background 0.3s,
-        color 0.3s;
+    transition: 0.3s;
 }
 
 .skill:hover {
@@ -286,37 +285,24 @@ section {
 }
 
 
-/* ---------- BOTÓN JAVA ---------- */
-
-.skill-link {
-    cursor: pointer;
-    color: var(--texto);
-}
-
-.skill-link:hover {
-    background: var(--rosa-claro);
-    color: var(--rosa-oscuro);
-    transform: translateY(-4px);
-    box-shadow: var(--sombra);
-}
-
-
 /* ---------- FORMACIÓN ---------- */
 
 .formacion {
-    background: var(--fondo);
+    background: var(--blanco);
 }
 
 .education-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 25px;
 }
 
 .education-card {
-    background: var(--blanco);
+    background: var(--rosa-suave);
 
-    border: 1px solid #f0e4e8;
+    border: 1px solid #f0e0e5;
 
     border-radius: var(--radio);
 
@@ -334,7 +320,7 @@ section {
 }
 
 .education-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
 
     box-shadow: var(--sombra-hover);
 
@@ -360,7 +346,7 @@ section {
     flex: 1;
 }
 
-.education-type {
+.education-date {
     color: var(--rosa-oscuro);
 
     font-size: 0.75rem;
@@ -371,51 +357,52 @@ section {
 
     font-weight: bold;
 
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 .education-content h3 {
-    font-size: 1.3rem;
-    line-height: 1.4;
+    font-size: 1.25rem;
+
+    line-height: 1.35;
+
     margin-bottom: 8px;
 }
 
-.education-content h4 {
-    color: var(--texto);
-    font-size: 0.95rem;
-    margin-bottom: 4px;
-}
+.education-place {
+    color: var(--rosa-oscuro);
 
-.education-date {
-    color: var(--rosa);
-    font-size: 0.85rem;
     font-weight: bold;
-    margin-bottom: 15px;
-}
 
-.education-content p:not(.education-type):not(.education-date) {
-    color: var(--texto-suave);
-    font-size: 0.92rem;
+    font-size: 0.9rem;
+
     margin-bottom: 12px;
 }
 
+.education-description {
+    color: var(--texto-suave);
 
-/* ---------- PROYECTOS ---------- */
+    font-size: 0.9rem;
+}
+
+
+/* ---------- PRÁCTICAS Y TRABAJOS ---------- */
 
 .practicas {
     background: var(--fondo);
 }
 
-.projects-grid {
+.technology-grid {
     display: grid;
 
-    grid-template-columns:
-        repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
     gap: 25px;
 }
 
-.project-card {
+
+/* ---------- TARJETAS DE TECNOLOGÍA ---------- */
+
+.technology-card {
     background: var(--blanco);
 
     border: 1px solid #f0e4e8;
@@ -425,6 +412,8 @@ section {
     padding: 30px;
 
     display: flex;
+    align-items: flex-start;
+
     gap: 25px;
 
     box-shadow: var(--sombra);
@@ -435,7 +424,7 @@ section {
         border-color 0.35s;
 }
 
-.project-card:hover {
+.technology-card:hover {
     transform: translateY(-8px);
 
     box-shadow: var(--sombra-hover);
@@ -443,11 +432,15 @@ section {
     border-color: #e4b8c7;
 }
 
-.project-icon {
-    min-width: 60px;
-    height: 60px;
+
+/* ---------- ICONO TECNOLOGÍA ---------- */
+
+.technology-icon {
+    min-width: 65px;
+    height: 65px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -455,72 +448,32 @@ section {
 
     border-radius: 18px;
 
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
-.project-content {
+
+/* ---------- CONTENIDO TECNOLOGÍA ---------- */
+
+.technology-content {
     flex: 1;
 }
 
-.project-type {
-    color: var(--rosa-oscuro);
+.technology-content h3 {
+    font-size: 1.4rem;
 
-    font-size: 0.75rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1px;
-
-    font-weight: bold;
-
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
-.project-content h3 {
-    font-size: 1.35rem;
-    margin-bottom: 10px;
-}
-
-.project-content p {
+.technology-content p {
     color: var(--texto-suave);
 
     font-size: 0.92rem;
 }
 
-
-/* ---------- TAGS ---------- */
-
-.tags {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 7px;
-
-    margin-top: 18px;
-}
-
-.tags span {
-    background: #faf0f3;
-
-    color: var(--rosa-oscuro);
-
-    padding: 5px 10px;
-
-    border-radius: 20px;
-
-    font-size: 0.72rem;
-
-    font-weight: bold;
-}
-
-
-/* ---------- ENLACE PROYECTO ---------- */
-
-.project-link {
+.technology-link {
     display: inline-block;
 
-    margin-top: 22px;
+    margin-top: 15px;
 
     color: var(--rosa-oscuro);
 
@@ -531,7 +484,7 @@ section {
     transition: 0.3s;
 }
 
-.project-link:hover {
+.technology-card:hover .technology-link {
     transform: translateX(5px);
 }
 
@@ -600,15 +553,6 @@ footer a {
 
 /* ---------- RESPONSIVE ---------- */
 
-@media (max-width: 900px) {
-
-    .education-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
 @media (max-width: 800px) {
 
     .nav-links {
@@ -624,7 +568,11 @@ footer a {
         gap: 40px;
     }
 
-    .projects-grid {
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .technology-grid {
         grid-template-columns: 1fr;
     }
 
@@ -667,11 +615,11 @@ footer a {
         font-size: 2.2rem;
     }
 
-    .project-card {
+    .education-card {
         flex-direction: column;
     }
 
-    .education-card {
+    .technology-card {
         flex-direction: column;
     }
 
